@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "8464b466-e182-4a65-8d27-5d95bf5aea1c",
+		"name": "Escenarios de Prueba - Proyecto Group 2 (corregido)",
+		"description": "Colección de pruebas para todos los endpoints del proyecto-group-2 en puerto 8080 con prefijo /api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehículos - Inserción válida",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 1, \"placa\": \"ABC123\", \"modelo\": \"2020\", \"ciudad_id\": 1 }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/vehiculos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 2, \"nombre\": \"Pedro\", \"edad\": 25 }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+        {
+			"name": "Ciudades - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"id\": 1, \"nombre\": \"Bogotá\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ciudades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ciudades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
