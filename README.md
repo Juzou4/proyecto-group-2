@@ -1,10 +1,13 @@
 Proyecto-Group-2
+
 Este proyecto es una aplicación web de backend desarrollada con Spring Boot y Java, diseñada para gestionar una base de datos de servicios de transporte. La aplicación expone una serie de endpoints RESTful que permiten la creación, lectura, actualización y eliminación de datos (CRUD) para entidades como usuarios, vehículos, ciudades, viajes y más.
 
 🤖 El Papel de la Inteligencia Artificial Generativa
+
 La creación de este archivo README fue asistida por inteligencia artificial generativa. Esta tecnología se empleó para estructurar la información de manera clara y lógica, generar la redacción de cada sección y asegurar un formato coherente, lo que optimizó el tiempo de documentación y permitió presentar la información de forma profesional y ordenada.
 
 🚀 Tecnologías Utilizadas
+
 Java 17: El lenguaje de programación principal.
 
 Spring Boot: Framework para la creación de aplicaciones de Java, que facilita la configuración y el desarrollo de servicios RESTful.
@@ -18,6 +21,7 @@ Lombok: Librería que reduce el código boilerplate en las clases del modelo.
 Postman: Herramienta utilizada para probar los endpoints de la API.
 
 🛠️ Requisitos del Sistema
+
 Java Development Kit (JDK) 17 o superior.
 
 Maven.
