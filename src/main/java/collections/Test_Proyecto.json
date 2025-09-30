@@ -1,9 +1,11 @@
 {
 	"info": {
 		"_postman_id": "8464b466-e182-4a65-8d27-5d95bf5aea1c",
-		"name": "Escenarios de Prueba - Proyecto Group 2 (corregido)",
-		"description": "Colección de pruebas para todos los endpoints del proyecto-group-2 en puerto 8080 con prefijo /api",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"name": "Escenarios de Prueba - Proyecto Group 2 (completo)",
+		"description": "Colección de pruebas corregida para todos los endpoints del proyecto-group-2 en puerto 8080 con prefijo /api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47371811",
+		"_collection_link": "https://santiagojlopez-4451294.postman.co/workspace/Santiago-Jos%C3%A9-L%C3%B3pez-Barreto's-W~9169cb45-955a-4d04-8026-5a0427d8bf40/collection/47371811-8464b466-e182-4a65-8d27-5d95bf5aea1c?action=share&source=collection_link&creator=47371811"
 	},
 	"item": [
 		{
@@ -18,7 +20,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"id\": 1, \"placa\": \"ABC123\", \"modelo\": \"2020\", \"ciudad_id\": 1 }"
+					"raw": "{ \"placa\": \"ABC123\", \"modelo\": \"2020\", \"idCiudad\": 1 }"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/vehiculos",
@@ -33,7 +35,42 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Vehículos - Inserción válida",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"placa\": \"ABC123\", \"modelo\": \"2020\", \"idCiudad\": 1 }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"placa\": \"ABC123\", \"modelo\": \"2020\", \"idCiudad\": 1}"
+				}
+			]
 		},
 		{
 			"name": "Usuarios - Válido",
@@ -47,7 +84,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"id\": 2, \"nombre\": \"Pedro\", \"edad\": 25 }"
+					"raw": "{ \"nombre\": \"Pedro\", \"celular\": \"3101234567\", \"email\": \"pedro@email.com\" }"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/usuarios",
@@ -62,9 +99,44 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Usuarios - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nombre\": \"Pedro\", \"celular\": \"3101234567\", \"email\": \"pedro@email.com\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"nombre\": \"Pedro\", \"celular\": \"3101234567\", \"email\": \"pedro@email.com\"}"
+				}
+			]
 		},
-        {
+		{
 			"name": "Ciudades - Válido",
 			"request": {
 				"method": "POST",
@@ -76,7 +148,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \"id\": 1, \"nombre\": \"Bogotá\" }"
+					"raw": "{ \"nombre\": \"Bogotá\" }"
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/ciudades",
@@ -91,7 +163,490 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Ciudades - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nombre\": \"Bogotá\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/ciudades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ciudades"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"nombre\": \"Bogotá\"}"
+				}
+			]
+		},
+		{
+			"name": "Viajes - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"idOrigen\": 1, \"idDestino\": 2, \"idUsuario\": 1 }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/viajes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"viajes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Viajes - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"idOrigen\": 1, \"idDestino\": 2, \"idUsuario\": 1 }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"viajes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"idOrigen\": 1, \"idDestino\": 2, \"idUsuario\": 1}"
+				}
+			]
+		},
+		{
+			"name": "Disponibilidades - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"idVehiculo\": 1, \"estado\": \"disponible\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/disponibilidades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disponibilidades"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Disponibilidades - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"idVehiculo\": 1, \"estado\": \"disponible\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/disponibilidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"disponibilidades"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"idVehiculo\": 1, \"estado\": \"disponible\"}"
+				}
+			]
+		},
+		{
+			"name": "Puntos Geográficos - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"latitud\": 4.60971, \"longitud\": -74.08175 }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/puntos-geograficos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"puntos-geograficos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Puntos Geográficos - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"latitud\": 4.60971, \"longitud\": -74.08175 }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/puntos-geograficos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"puntos-geograficos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"latitud\": 4.60971, \"longitud\": -74.08175}"
+				}
+			]
+		},
+		{
+			"name": "Usuarios Conductores - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"idUsuario\": 1, \"licencia\": \"ABC123\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios-conductores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios-conductores"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Usuarios Conductores - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"idUsuario\": 1, \"licencia\": \"ABC123\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios-conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios-conductores"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"idUsuario\": 1, \"licencia\": \"ABC123\"}"
+				}
+			]
+		},
+		{
+			"name": "Usuarios Servicios - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"idUsuario\": 1, \"idServicio\": 1 }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios-servicios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios-servicios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Usuarios Servicios - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"idUsuario\": 1, \"idServicio\": 1 }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuarios-servicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuarios-servicios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"idUsuario\": 1, \"idServicio\": 1}"
+				}
+			]
+		},
+		{
+			"name": "Revisiones - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"idVehiculo\": 1, \"fecha\": \"2025-01-01\", \"resultado\": \"aprobado\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/revisiones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"revisiones"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Revisiones - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"idVehiculo\": 1, \"fecha\": \"2025-01-01\", \"resultado\": \"aprobado\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/revisiones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"revisiones"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"idVehiculo\": 1, \"fecha\": \"2025-01-01\", \"resultado\": \"aprobado\"}"
+				}
+			]
+		},
+		{
+			"name": "Servicios - Válido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"nombre\": \"Mantenimiento\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/servicios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"servicios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Servicios - Válido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"nombre\": \"Mantenimiento\" }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\"nombre\": \"Mantenimiento\"}"
+				}
+			]
 		}
 	]
 }
