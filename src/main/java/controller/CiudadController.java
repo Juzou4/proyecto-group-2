@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/ciudades")
 public class CiudadController {
     private final AlpescabService svc;
-    public CiudadController(AlpescabService svc) { this.svc = svc; }
+    public CiudadController(AlpescabService svc) {
+         this.svc = svc; 
+        }
 
     @PostMapping
-    public Long crear(@RequestBody CiudadDTO c) { return svc.crearCiudad(c); }
+    public Long crear(@RequestBody CiudadDTO c) {
+         return svc.crearCiudad(c); 
+        }
 }
 

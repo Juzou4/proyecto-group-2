@@ -7,8 +7,12 @@ import service.AlpescabService;
 @RequestMapping("/viajes")
 public class ViajeController {
     private final AlpescabService svc;
-    public ViajeController(AlpescabService svc) { this.svc = svc; }
+    public ViajeController(AlpescabService svc) {
+         this.svc = svc; 
+        }
 
     @PostMapping("/{id}/finalizar")
-    public int finalizar(@PathVariable Long id) { return svc.finalizarViaje(id); }
+    public int finalizar(@PathVariable Long id) {
+         return svc.finalizarViaje(id); 
+        }
 }

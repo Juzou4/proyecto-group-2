@@ -8,8 +8,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/revisiones")
 public class RevisionController {
     private final AlpescabService svc;
-    public RevisionController(AlpescabService svc) { this.svc = svc; }
+    public RevisionController(AlpescabService svc) {
+         this.svc = svc; 
+        }
+
 
     @PostMapping
-    public Long crear(@RequestBody RevisionDTO dto) { return svc.crearRevision(dto); }
+    public Long crear(@RequestBody RevisionDTO dto) {
+         return svc.crearRevision(dto); 
+        }
 }

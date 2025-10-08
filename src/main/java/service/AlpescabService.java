@@ -24,7 +24,9 @@ public class AlpescabService {
     // Dependencia al DAO (inyección por constructor, inmutable)
     private final AlpescabDAO dao;
     //// Spring inyecta el DAO al construir el Service
-    public AlpescabService(AlpescabDAO dao) { this.dao = dao; }
+    public AlpescabService(AlpescabDAO dao) {
+         this.dao = dao; 
+        }
 
     // Cada método del Service delega la operación al DAO.
     // Aquí también es el lugar para validar, aplicar reglas de negocio y manejar transacciones si hiciera falta.

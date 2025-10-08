@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/vehiculos")
 public class VehiculoController {
     private final AlpescabService svc;
-    public VehiculoController(AlpescabService svc) { this.svc = svc; }
+    public VehiculoController(AlpescabService svc) {
+         this.svc = svc; 
+        }
 
     @PostMapping
-    public Long crear(@RequestBody VehiculoDTO dto) { return svc.crearVehiculo(dto); }
+    public Long crear(@RequestBody VehiculoDTO dto) {
+         return svc.crearVehiculo(dto); 
+        }
     
 }

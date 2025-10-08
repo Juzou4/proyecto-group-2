@@ -30,7 +30,9 @@ public class AlpescabDAO {
 
 	private final JdbcTemplate jdbc;
 
-	public AlpescabDAO(JdbcTemplate jdbc) {this.jdbc = jdbc;}
+	public AlpescabDAO(JdbcTemplate jdbc) {
+        this.jdbc = jdbc;
+    }
 
     // Util
     private Long insertAndReturnId(String sql, Object... params) {

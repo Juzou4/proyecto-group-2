@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/puntos")
 public class PuntoController {
     private final AlpescabService svc;
-    public PuntoController(AlpescabService svc) { this.svc = svc; }
+    public PuntoController(AlpescabService svc) {
+         this.svc = svc; 
+        }
     
     @PostMapping
-    public Long crear(@RequestBody PuntoDTO dto) { return svc.crearPunto(dto); }
+    public Long crear(@RequestBody PuntoDTO dto) {
+         return svc.crearPunto(dto); 
+        }
 }
