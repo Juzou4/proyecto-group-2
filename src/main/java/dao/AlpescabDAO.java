@@ -172,7 +172,7 @@ public class AlpescabDAO {
     private static double haversineKm(double lat1, double lon1, double lat2, double lon2) {
     //R = 6371.0: aproximación del radio medio terrestre en km
     double R = 6371.0; // km
-    // toRadians(...): las funciones trigonométricas trabajan en radianes, no en grados.
+    // toRadians(...): las funciones trigonométricas trabajan en radianes
     //dLat y dLon: diferencias angulares entre coordenadas.
     double dLat = Math.toRadians(lat2-lat1);
     double dLon = Math.toRadians(lon2-lon1);

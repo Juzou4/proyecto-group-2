@@ -23,7 +23,7 @@ import java.util.Map;
 public class AlpescabService {
     // Dependencia al DAO (inyección por constructor, inmutable)
     private final AlpescabDAO dao;
-    //// Spring inyecta el DAO al construir el Service
+    // Spring inyecta el DAO al construir el Service
     public AlpescabService(AlpescabDAO dao) {
          this.dao = dao; 
         }
